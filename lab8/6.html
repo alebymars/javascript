@@ -1,0 +1,14 @@
+<ol id="list">
+    <li>Привет</li>
+    <li>Мир</li>
+</ol>
+<script>
+    const clear = (elem) => {
+        while (elem.firstChild) {
+            elem.removeChild(elem.firstChild)
+        }
+    }
+    setTimeout(() => {
+        clear(list); // очищает список 
+    }, 1000);
+</script>

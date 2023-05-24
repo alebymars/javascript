@@ -1,0 +1,13 @@
+body {
+  /* display: flex; */
+  padding: 20px;
+  /* background-color: blue; */
+}
+
+.formAddRecord {
+  display: none;
+}
+
+.newButton {
+  display: none;
+}
