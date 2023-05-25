@@ -4,6 +4,9 @@ const test = () => {
   getData()
     .then((result) => {
       createTableWithData(result);
+      // показываем кноки
+      document.getElementById("newButton").style.display = "block";
+      document.getElementById("filterDiv").style.display = "block";
     })
     .catch((err) => {
       console.log(err);

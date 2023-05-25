@@ -10,7 +10,7 @@ body {
 }
 
 .formAddRecord {
-  display: block;
+  display: none;
   /* background-color: aqua; */
   width: 50%;
   padding: 10px;

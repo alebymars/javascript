@@ -43,12 +43,5 @@ export const getData = async () => {
 
     await data.push(human);
   }
-  // показываем кноки
-  document.getElementById("newButton").style.display = "block";
-  document.getElementById("filterDiv").style.display = "block";
-  // document.getElementById("male").style.display = "block";
-  // document.getElementById("female").style.display = "block";
-  // document.getElementById("all").style.display = "block";
-
   return data;
 };
