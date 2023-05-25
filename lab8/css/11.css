@@ -1,7 +1,6 @@
 body {
   display: block;
   padding: 20px;
-  /* width: 100%; */
   background-color: rgb(165, 165, 255);
 }
 
@@ -11,7 +10,6 @@ body {
 
 .formAddRecord {
   display: none;
-  /* background-color: aqua; */
   width: 50%;
   padding: 10px;
   border-radius: 5px;
@@ -38,7 +36,6 @@ body {
 }
 
 .filter {
-  /* display: none; */
   padding: 5px 10px;
   margin: 7px 0;
 }

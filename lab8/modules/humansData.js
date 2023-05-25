@@ -1,5 +1,3 @@
-// import { createTableWithData } from "../js/11";
-
 export const getData = async () => {
   let sex = ["male", "female"];
   let firstNames = ["Ivan", "Petr", "Anna", "Katya"];

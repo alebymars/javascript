@@ -38,7 +38,7 @@ const createTableWithData = (data) => {
       </tr>
           ${content}
       </table>
-      `;
+  `;
 
   ti.innerHTML = tableWithData;
   document.body.appendChild(ti);
@@ -52,7 +52,6 @@ const colorAge = () => {
 
   for (let i = 1; i < rows.length; i++) {
     let cells = rows[i].cells;
-    //   console.log(cells[2].innerHTML);
     let result = cells[2].innerHTML;
     if (result < 18) {
       cells[2].style.backgroundColor = "green";
@@ -97,24 +96,7 @@ const addNewRecord = (firstName, lastName, age, sex, address, phone) => {
   buttonCell.innerHTML = `<input type="button" value="Удалить" class="button" onclick="deleteRecord(${
     +lastId + 1
   })">`;
-
-  // const rows = table.rows;
-
-  // for (let i = 1; i < rows.length; i++) {
-  //   let cells = rows[i].cells;
-  //   //   console.log(cells[2].innerHTML);
-  //   let result = cells[2].innerHTML;
-  //   if (result < 18) {
-  //     cells[2].style.backgroundColor = "green";
-  //   } else if (result >= 18 && result <= 59) {
-  //     cells[2].style.backgroundColor = "yellow";
-  //   } else {
-  //     cells[2].style.backgroundColor = "red";
-  //   }
-  // }
   colorAge();
-
-  console.log("record");
 };
 
 const submitForm = () => {
@@ -129,20 +111,16 @@ const submitForm = () => {
   const address = form.elements["address"].value;
   const phone = form.elements["phone"].value;
 
-  //   console.log(form.elements["firstName"].value.length);
-
   addNewRecord(firstName, lastName, age, sex, address, phone);
 
   form.reset();
-  // Делаем что-то с полученными данными
-  //   console.log(`Имя: ${firstName}, Фамилия: ${lastName}`);
 };
 
 const deleteRecord = (id) => {
   const table = document.getElementById("humansTable");
   const rows = table.getElementsByTagName("tr");
 
-  const idToDelete = id.toString(); // Id записи для удаления
+  const idToDelete = id.toString(); // id записи для удаления
   let rowToDelete = null;
 
   for (let i = 0; i < rows.length; i++) {
@@ -167,8 +145,6 @@ const getLastRowId = () => {
   if (rows.length > 0) {
     const lastRow = rows[rows.length - 1];
     const lastRowId = lastRow.id;
-
-    console.log(`lastRowId => ${lastRowId}`);
 
     return lastRowId;
   }
@@ -220,9 +196,6 @@ const removeTable = () => {
   table.parentNode.removeChild(table);
   document.getElementById("newButton").style.display = "none";
   document.getElementById("formAddRecord").style.display = "none";
-  // document.getElementById("male").style.display = "none";
-  // document.getElementById("female").style.display = "none";
-  // document.getElementById("all").style.display = "none";
   document.getElementById("filterDiv").style.display = "none";
 };
 
