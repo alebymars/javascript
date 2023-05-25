@@ -1,13 +1,85 @@
 body {
-  /* display: flex; */
+  display: block;
   padding: 20px;
-  /* background-color: blue; */
+  /* width: 100%; */
+  background-color: rgb(165, 165, 255);
+}
+
+* {
+  outline: none !important;
 }
 
 .formAddRecord {
-  display: none;
+  display: block;
+  /* background-color: aqua; */
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.8px);
+  -webkit-backdrop-filter: blur(14.8px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.inputAddRecord {
+  width: 40%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border-width: 0;
 }
 
 .newButton {
   display: none;
+  padding: 5px 10px;
+  margin: 7px 0;
+}
+
+.filter {
+  /* display: none; */
+  padding: 5px 10px;
+  margin: 7px 0;
+}
+
+.filterDiv {
+  display: none;
+}
+
+.humansTable {
+  display: flex;
+  width: 100%;
+}
+
+tbody {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  background-color: aqua;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+  border: 1px solid;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+td {
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+
+tr {
+  width: 100%;
+}
+
+.button {
+  padding: 5px 10px;
+  margin: 7px 0;
 }

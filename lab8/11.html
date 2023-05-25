@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/js.ico">
     <title>11 задание</title>
     <link rel="stylesheet" href="./css/11.css" type="text/css" />
-    <script src="./modules/humansData.mjs"></script>
+    <script src="./modules/humansData.js" type="module"></script>
+    <script src="./js/11.js" type="module"></script>
 </head>
 
 <body>
-    <input type="button" value="Загрузить" onclick="getData()" />
-    <input id="newButton" type="button" class="newButton" value="new" onclick="visibleForm()" />
-    <input type="button" value="male" onclick="showOnlyMale()">
-    <input type="button" value="female" onclick="showOnlyFemale()">
-    <input type="button" value="all" onclick="showMaleAndFemale()">
-    <form id="formAddRecord" class="formAddRecord" onsubmit="return false;">
-        <input type="text" name="firstName" id="firstName" placeholder="Имя" />
-        <input type="text" name="lastName" id="lastName" placeholder="Фамилия" />
-        <input type="text" name="age" id="age" placeholder="Возраст" />
-        <input type="text" name="sex" id="sex" placeholder="Пол" />
-        <input type="text" name="address" id="address" placeholder="Адрес" />
-        <input type="text" name="phone" id="phone" placeholder="Телефон" />
-        <input type="submit" value="Создать" onclick="submitForm()" />
+    <input id="load" class="button" type="button" value="Загрузить" onclick="test()" />
+    <input id="newButton" type="button" class="newButton" value="создать запись" onclick="visibleForm()" />
+    <!-- <p>Filters</p> -->
+    <div id="filterDiv" class="filterDiv">
+        <input id="male" class="filter" type="button" value="male" onclick="showOnlyMale()">
+        <input id="female" class="filter" type="button" value="female" onclick="showOnlyFemale()">
+        <input id="all" class="filter" type="button" value="all" onclick="showMaleAndFemale()">
+    </div>
+    <form id="formAddRecord" class="formAddRecord" onsubmit="submitForm(); return false;">
+        <input type="text" class="inputAddRecord" name="firstName" id="firstName" placeholder="Имя" required />
+        <input type="text" class="inputAddRecord" name="lastName" id="lastName" placeholder="Фамилия" required />
+        <input type="text" class="inputAddRecord" name="age" id="age" placeholder="Возраст" required />
+        <input type="text" class="inputAddRecord" name="sex" id="sex" placeholder="Пол" required />
+        <input type="text" class="inputAddRecord" name="address" id="address" placeholder="Адрес" required />
+        <input type="text" class="inputAddRecord" name="phone" id="phone" placeholder="Телефон" required />
+        <input type="submit" class="button" value="Создать" />
     </form>
     <div id="main"></div>
 </body>
