@@ -8,6 +8,7 @@
             elem.removeChild(elem.firstChild)
         }
     }
+    // вставил в setTimeout, чтобы увидеть, что точно всё работает корректно.
     setTimeout(() => {
         clear(list); // очищает список 
     }, 1000);

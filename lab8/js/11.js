@@ -27,7 +27,6 @@ const createTableWithData = (data) => {
           <td>${address}</td>
           <td>${phone}</td>
           <td><input type="button" class="button" value="Удалить" onclick="deleteRecord(${index})"></td>
-          <td><input id="buttonEdit" type="button" class="buttonEdit" value="Редактировать" onclick="console.log('Редактируем строку #${index}')"></td>
       </tr>
   `);
   });
@@ -97,12 +96,6 @@ const addNewRecord = (firstName, lastName, age, sex, address, phone) => {
   buttonCell.innerHTML = `<input type="button" value="Удалить" class="button" onclick="deleteRecord(${
     +lastId + 1
   })">`;
-  const buttonEdit = newRow.insertCell();
-  buttonEdit.innerHTML = `<td><input id=${
-    +lastId + 1
-  } type="button" class="buttonEdit" value="Редактировать" onclick="editRow(${
-    +lastId + 1
-  })"></td>`;
 
   colorAge();
 };
@@ -122,6 +115,7 @@ const submitForm = () => {
   addNewRecord(firstName, lastName, age, sex, address, phone);
 
   form.reset();
+  document.getElementById("formAddRecord").style.display = "none";
 };
 
 const deleteRecord = (id) => {
@@ -224,9 +218,6 @@ window.submitForm = submitForm;
 window.deleteRecord = deleteRecord;
 window.checkRows = checkRows;
 window.colorAge = colorAge;
-// window.editButtons = editButtons;
-// window.editRow = editRow;
-// window.saveRow = saveRow;
 export default {
   fetchData,
   visibleForm,
@@ -237,7 +228,4 @@ export default {
   deleteRecord,
   checkRows,
   colorAge,
-  // editButtons,
-  // editRow,
-  // saveRow,
 };
