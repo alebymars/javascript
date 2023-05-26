@@ -1,8 +1,8 @@
 let div = document.querySelector("div");
-console.log(`div => ${div.textContent}`);
+console.log(div);
 
 let ul = document.querySelector("ul");
-console.log(`ul => ${ul.textContent}`);
+console.log(ul);
 
 let twoLi = document.querySelectorAll("li")[1];
-console.log(`two li => ${twoLi.textContent}`);
+console.log(twoLi);

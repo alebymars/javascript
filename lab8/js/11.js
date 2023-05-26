@@ -1,6 +1,6 @@
 import { getData } from "../modules/humansData.js";
 
-const test = () => {
+const fetchData = () => {
   getData()
     .then((result) => {
       createTableWithData(result);
@@ -27,6 +27,7 @@ const createTableWithData = (data) => {
           <td>${address}</td>
           <td>${phone}</td>
           <td><input type="button" class="button" value="Удалить" onclick="deleteRecord(${index})"></td>
+          <td><input id="buttonEdit" type="button" class="buttonEdit" value="Редактировать" onclick="console.log('Редактируем строку #${index}')"></td>
       </tr>
   `);
   });
@@ -34,7 +35,7 @@ const createTableWithData = (data) => {
   const tableWithData = `
     <table id="humansTable" class="humansTable">
       <tr class="tableTr">
-          <td colspan="7">Человек</td>
+          <td colspan="8">Человек</td>
       </tr>
           ${content}
       </table>
@@ -96,6 +97,13 @@ const addNewRecord = (firstName, lastName, age, sex, address, phone) => {
   buttonCell.innerHTML = `<input type="button" value="Удалить" class="button" onclick="deleteRecord(${
     +lastId + 1
   })">`;
+  const buttonEdit = newRow.insertCell();
+  buttonEdit.innerHTML = `<td><input id=${
+    +lastId + 1
+  } type="button" class="buttonEdit" value="Редактировать" onclick="editRow(${
+    +lastId + 1
+  })"></td>`;
+
   colorAge();
 };
 
@@ -207,7 +215,7 @@ const checkRows = () => {
   }
 };
 
-window.test = test;
+window.fetchData = fetchData;
 window.visibleForm = visibleForm;
 window.showOnlyMale = showOnlyMale;
 window.showOnlyFemale = showOnlyFemale;
@@ -216,8 +224,11 @@ window.submitForm = submitForm;
 window.deleteRecord = deleteRecord;
 window.checkRows = checkRows;
 window.colorAge = colorAge;
+// window.editButtons = editButtons;
+// window.editRow = editRow;
+// window.saveRow = saveRow;
 export default {
-  test,
+  fetchData,
   visibleForm,
   showOnlyMale,
   showOnlyFemale,
@@ -226,4 +237,7 @@ export default {
   deleteRecord,
   checkRows,
   colorAge,
+  // editButtons,
+  // editRow,
+  // saveRow,
 };
