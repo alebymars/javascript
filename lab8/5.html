@@ -9,8 +9,8 @@
 </ul>
 <script>
     let links = document.querySelectorAll('a');
-    for (let i = 1; i < links.length; i++) {
-        if (links[i].hostname !== window.location.hostname) {
+    for (let i = 0; i < links.length; i++) {
+        if (links[i].getAttribute('href') && links[i].hostname !== window.location.hostname && !links[i].getAttribute('href')?.includes('http://internal.com')) {
             links[i].style.color = "orange";
         }
     }
