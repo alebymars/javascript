@@ -1,7 +1,7 @@
 export const getData = async () => {
   let sex = ["male", "female"];
   let firstNames = ["Ivan", "Petr", "Anna", "Katya"];
-  let lastNames = ["Smith", "Opel", "Bond", "Nuel"];
+  let lastNames = ["Smith", "Oppel", "Bond", "Nuel"];
   let cities = ["Kemerovo", "Novosibirsk", "Moscow", "SPB"];
   let streets = [
     "Krasnaya St.",
@@ -18,7 +18,7 @@ export const getData = async () => {
     let gender = sex[Math.floor(Math.random() * sex.length)];
     let firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
     let lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-    let age = Math.floor(Math.random() * 80) + 5;
+    let age = Math.floor(Math.random() * 90) + 5;
     let city = cities[Math.floor(Math.random() * cities.length)];
     let street = streets[Math.floor(Math.random() * streets.length)];
     let address = street + ", " + Math.floor(Math.random() * 100) + ", " + city;

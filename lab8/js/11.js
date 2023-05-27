@@ -54,11 +54,11 @@ const colorAge = () => {
     let cells = rows[i].cells;
     let result = cells[2].innerHTML;
     if (result < 18) {
-      cells[2].style.backgroundColor = "green";
+      rows[i].style.backgroundColor = "green";
     } else if (result >= 18 && result <= 59) {
-      cells[2].style.backgroundColor = "yellow";
+      rows[i].style.backgroundColor = "yellow";
     } else {
-      cells[2].style.backgroundColor = "red";
+      rows[i].style.backgroundColor = "red";
     }
   }
 };
